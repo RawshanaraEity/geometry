@@ -53,9 +53,9 @@
               <h2 class="card-title">Rectangle</h2>
               <p>Area (A) = w * l</p>
               <p>
-                <input type="text" class="border w-20 px-2 text-xl bg-gray-200" name="" id="rectangle-width" placeholder="width">
+                <input type="number" class="border w-20 px-2 text-xl bg-gray-200" name="" id="rectangle-width" placeholder="width">
               <span class="ml-2">cm</span>
-                <input type="text" class="border ml-2 w-20 px-2 text-xl bg-gray-200" name="" id="rectangle-length" placeholder="length">
+                <input type="number" class="border ml-2 w-20 px-2 text-xl bg-gray-200" name="" id="rectangle-length" placeholder="length">
               <span class="ml-2">cm</span>
               </p>
               <p class="text-2xl">Area: <span id="rectangle-area" class="font-bold">0</span> cm<sup>2</sup></p>
@@ -92,26 +92,26 @@
             <figure class="p-6">
               <img
                 src="images/rhombus.png"
-                alt="ellipse"
+                alt="rhombus"
               />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Ellipse</h2>
-              <p>Area (A) = π ab</p>
+              <h2 class="card-title">Rhombus</h2>
+              <p>Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></p>
               <p>
-                <input type="text" class="border w-20 px-2 text-xl bg-gray-200" name="" id="ellipse-mejor-redius" placeholder="mejor">
+                <input type="text" class="border w-20 px-2 text-sm bg-gray-200" name="" id="rhombus-diagonal-1" placeholder="diagonal1">
               <span class="ml-2">cm</span>
-                <input type="text" class="border ml-2 w-20 px-2 text-xl bg-gray-200" name="" id="ellipse-minor-redius" placeholder="minor">
+                <input type="text" class="border ml-2 w-20 px-2 text-sm bg-gray-200" name="" id="rhombus-diagonal-2" placeholder="diagonal2">
               <span class="ml-2">cm</span>
               </p>
-              <p class="text-2xl">Area: <span id="ellipse-area" class="font-bold">0</span> cm<sup>2</sup></p>
+              <p class="text-2xl">Area: <span id="rhombus-area" class="font-bold">0</span> cm<sup>2</sup></p>
               <div class="card-actions">
-                <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+                <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
           <!-- pentagon card -->
-          <div class="card bg-base-100 shadow-xl">
+          <div class="card bg-base-100 shadow-xl"> 
             <figure class="p-6">
               <img
                 src="images/pentagon.png"
@@ -119,17 +119,17 @@
               />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Ellipse</h2>
-              <p>Area (A) = π ab</p>
+              <h2 class="card-title">Pentagon</h2>
+              <p>Area (A) = 0.5 * p * b</p>
               <p>
-                <input type="text" class="border w-20 px-2 text-xl bg-gray-200" name="" id="ellipse-mejor-redius" placeholder="mejor">
+                <input type="text" class="border w-20 px-2 text-xl bg-gray-200" name="" id="pentagon-perimeter" placeholder="perimeter">
               <span class="ml-2">cm</span>
-                <input type="text" class="border ml-2 w-20 px-2 text-xl bg-gray-200" name="" id="ellipse-minor-redius" placeholder="minor">
+                <input type="text" class="border ml-2 w-20 px-2 text-xl bg-gray-200" name="" id="pentagon-base" placeholder="base">
               <span class="ml-2">cm</span>
               </p>
-              <p class="text-2xl">Area: <span id="ellipse-area" class="font-bold">0</span> cm<sup>2</sup></p>
+              <p class="text-2xl">Area: <span id="pentagon-area" class="font-bold">0</span> cm<sup>2</sup></p>
               <div class="card-actions">
-                <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
+                <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
               </div>
             </div>
           </div>
@@ -158,8 +158,11 @@
           </div>
         </div>
         <!-- area container -->
-        <div class="w-96">
-          <div class="text-2xl text-center">Area Calculator</div>
+        <div class="w-96 ">
+          <div class="text-3xl text-center">Area Calculator</div>
+          <div id="calculation-entry" class="text-center">
+
+          </div>
         </div>
       </div>
     </main>
